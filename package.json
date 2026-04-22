@@ -1,37 +1,25 @@
 {
   "name": "backend-programming-template-2025",
   "version": "1.0.0",
-  "description": "1. Fork and clone this repository to your local computer. 2. Open the project using VS Code. 3. Install the recommended VS Code extensions: `ESLint` and `Prettier`. 4. Copy and rename `.env.example` to `.env`. Open `.env` and change the database connection string. 5. Run `npm install` to install the project dependencies. 6. Run `npm run dev` to start the dev server. 7. Test the endpoints in the API client app.",
-  "license": "ISC",
-  "author": "Janson Hendryli",
-  "type": "commonjs",
+  "description": "Backend project",
   "main": "src/index.js",
+  "type": "commonjs",
   "scripts": {
-    "dev": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint src/**"
+    "dev": "nodemon ./src/index.js"
   },
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "body-parser": "^1.20.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
     "express": "^4.22.1",
-    "express-async-errors": "^3.1.1",
-    "method-override": "^3.0.0",
     "mongoose": "^8.23.0",
+    "dotenv": "^16.4.7",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.3",
+    "bcrypt": "^5.1.1",
     "pino": "^9.6.0",
-    "pino-http": "^10.4.0"
+    "pino-http": "^10.4.0",
+    "method-override": "^3.0.0",
+    "express-async-errors": "^3.1.1"
   },
   "devDependencies": {
-    "@faker-js/faker": "^9.6.0",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-prettier": "^5.2.3",
-    "nodemon": "^3.1.9",
-    "pino-pretty": "^13.0.0",
-    "prettier": "^3.5.3"
+    "nodemon": "^3.1.9"
   }
 }
