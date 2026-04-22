@@ -1,18 +1,16 @@
 const express = require('express');
-const connectDB = require('./config/db');
-
 const app = express();
 
-connectDB();
+const menusRoutes = require('./menus');
 
 app.use(express.json());
-app.use((req, res, next) => {
-  console.log('REQ:', req.method, req.url);
-  next();
+
+app.get('/', (req, res) => {
+  res.send('Server API jalan');
 });
 
-app.use('/api', require('./routes/authRoutes'));
+app.use('/api/menus', menusRoutes);
 
-app.listen(5000, () => {
-  console.log('Server jalan di port 5000');
-});
+app.listen(3000, () => {
+  console.log('Server jalan di http://localhost:3000');
+});  
